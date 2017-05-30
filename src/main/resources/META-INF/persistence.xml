@@ -39,5 +39,14 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 		<class>br.com.JpaEficaz.model.Carro</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 	</persistence-unit>
+	
+	<!-- persistence.xml // declarações omitidas-->
+	<persistence-unit name="JPA_EFICAZ_HIBERNATE" transaction-type="JTA">
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	<jta-data-source>DataSource</jta-data-source>
+	<properties>
+		<!-- outras propriedades -->
+	</properties>
+	</persistence-unit>
 </persistence>
 
