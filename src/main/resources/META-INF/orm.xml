@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Cliente A orm.xml -->
+<entity class="com.uaihebert.model.Pessoa">
+	<attributes>
+		<basic name="nome">
+			<column name="nome_pessoa" />
+		</basic>
+	</attributes>
+</entity>
+
+<!-- Cliente B orm.xml -->
+<entity class="com.uaihebert.model.Pessoa">
+	<attributes>
+		<basic name="nome">
+			<column name="nome_pessoa" />
+		</basic>
+	</attributes>
+</entity>
+
+<!-- Cliente C orm.xml -->
+<entity class="com.uaihebert.model.Pessoa">
+	<attributes>
+		<basic name="nome">
+			<column name="nome_txt" />
+		</basic>
+	</attributes>
+</entity>
