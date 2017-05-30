@@ -8,9 +8,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		EntityManager entityManager = JpaUtil.getEntityManager();
-		entityManager.getTransaction().begin();
-		// faz algo
-		entityManager.getTransaction().commit();
-		entityManager.close();
+		
+		try{
+			entityManager.getTransaction().begin();
+			// faz algo
+			entityManager.getTransaction().commit();
+		}catch(Exception e){
+			e.printStackTrace();
+			e.getMessage();
+		}finally{
+			entityManager.close();
+		}
 	}
 }
