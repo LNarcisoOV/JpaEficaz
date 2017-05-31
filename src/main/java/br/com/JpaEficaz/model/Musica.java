@@ -28,8 +28,7 @@ public class Musica {
 	public static final String SEQUENCE_NAME = "SEQUENCIA_MUSICA";
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,
-					generator = SEQUENCE_NAME)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
 	@Basic(optional = false)
