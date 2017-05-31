@@ -9,12 +9,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SecondaryTable;
+import javax.persistence.SecondaryTables;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "TB_MUSICA")
-@SecondaryTable(name = "TB_MUSICA_2372", pkJoinColumns = { @PrimaryKeyJoinColumn(name = "MUSICA_ID") })
-public class MusicaDuasTabelas {
+@SecondaryTables({ 
+		@SecondaryTable(name = "MUSICA_2372", pkJoinColumns = { 
+				@PrimaryKeyJoinColumn(name = "MUSICA_ID") 
+		}),
+		@SecondaryTable(name = "INTERNATIONAL_MUSIC", pkJoinColumns = { 
+				@PrimaryKeyJoinColumn(name = "MUSICA_ID") }) 
+		})
+public class MusicaVariasTabelas {
 	@Id
 	@OneToOne
 	@JoinColumn(name = "codigo_id")
